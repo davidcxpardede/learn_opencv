@@ -9,3 +9,7 @@ main:
 
 clean:
 	-rm main
+	-rm ./data/result/*.jpg
+
+run:
+	-./main

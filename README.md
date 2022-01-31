@@ -1,6 +1,7 @@
 # learn_opencv
 
 ## Open-CV installation (Ubuntu 20.04 LTS)
+This workspace c++ openCV version: 4.5.5
 1. Install dependencies
 
 ```
@@ -43,3 +44,10 @@ Python: ```python3 -c "import cv2; print(cv2.__version__)"```
 
 7. Verify opencv build directories installation
 ```sudo ls /usr/local/include/opencv4``` with expected outcome ```opencv2```
+
+## Run the program
+1. Navigate to an example directory ```cd src/modify_image```
+
+2. Compile with ```make```
+
+3. Run with ```make run```
