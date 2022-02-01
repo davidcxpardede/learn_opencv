@@ -51,3 +51,5 @@ Python: ```python3 -c "import cv2; print(cv2.__version__)"```
 2. Compile with ```make```
 
 3. Run with ```make run```
+
+4. Clear compilled object ```make clean```
