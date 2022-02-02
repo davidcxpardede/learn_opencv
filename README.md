@@ -35,7 +35,10 @@ This workspace c++ openCV version: 4.5.5
 ```
 
 5. Start the compilation process:
-```make -j8```
+
+```make -jN```
+where N is the max number thread in your PC, or you may remove the flag.
+
 ```sudo make install```
 
 6. Verify the installation
