@@ -15,12 +15,17 @@ This workspace c++ openCV version: 4.5.5
 ```
 
 2. Clone the OpenCV’s and OpenCV contrib repositories
+
 ```mkdir ~/opencv_build && cd ~/opencv_build```
+
 ```git clone https://github.com/opencv/opencv.git```
+
 ```git clone https://github.com/opencv/opencv_contrib.git```
 
 3. Create a temporary build directory
+
 ```cd ~/opencv_build/opencv```
+
 ```mkdir -p build && cd build```
 
 4. Set up the OpenCV build with CMake
@@ -42,10 +47,13 @@ where N is the max number thread in your PC, or you may remove the flag.
 ```sudo make install```
 
 6. Verify the installation
+
 C++: ```pkg-config --modversion opencv4```
+
 Python: ```python3 -c "import cv2; print(cv2.__version__)"```
 
 7. Verify opencv build directories installation
+
 ```sudo ls /usr/local/include/opencv4``` with expected outcome ```opencv2```
 
 ## Run the program
