@@ -83,7 +83,7 @@ void cluster_stars(Mat & image_threshold, vector<PixelPosListT> * outRecognizedC
 int main(int argc, char** argv)
 {
   // Read the image file
-  Mat image = imread("./data/stars_ori.jpg", IMREAD_GRAYSCALE);
+  Mat image = imread("./data/eight_stars.jpg", IMREAD_GRAYSCALE);
 
   // Check for failure
   if (image.empty())
@@ -92,7 +92,7 @@ int main(int argc, char** argv)
     cin.get(); //wait for any key press
     return -1;
   }
-  cout << "Image successfully openned" << endl;
+  cout << "Image successfully opened!" << endl;
   
   // Perform otsu threshold
   Mat image_threshold;
