@@ -1,6 +1,6 @@
 all: main
 
-#verify opencv installation directory by running on your own terminal: pkg-config --cflags opencv4
+#verify opencv installation directory by running on your own terminal: d
 #g++ main.cpp -L/usr/local/lib -lopencv_imgcodecs -o main -I/usr/local/include/opencv4 !!!error!!!
 
 #!!!don't forget to add openCV Library and Include in compiling g++!!!
