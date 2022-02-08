@@ -1,0 +1,256 @@
+STRUCTURES
+
+1. #include <list>
+
+    Lists are sequence containers that allow non-contiguous memory allocation.
+    As compared to vector, the list has slow traversal, but once a position has been found, insertion and deletion are quick.
+    Normally, when we say a List, we talk about a doubly linked list.
+    For implementing a singly linked list, we use a forward list.
+
+2. #include <set>
+
+    Sets in C++ STL are the containers which must have unique elements in a general order.
+    Sets must have unique elements because the value of the element identifies the element.
+    Once added a value in set container later cannot be modified.
+    We can still remove or add the values to the set.
+    Sets are used as binary search trees.
+    In set, all the elements are stored in the sorted position.
+
+3. #include <algorithm>
+
+    The header <algoritm> defines a collection of functions especially designed to be used on ranges of elements.
+
+    A range is any sequence of objects that can be accessed through iterators or pointers, such as an array or an instance of some of the STL containers.
+    Notice though, that algorithms operate through iterators directly on the values, not affecting in any way the structure of any possible container.
+
+    The algorithms library defines functions for a variety of purposes that operate on ranges of elements.
+
+    The function used on this program is find().
+
+4. #include <tuple>
+
+    A tuple is am object that can hold a number of elements.
+    The elements can be of different data types.
+    The elements of tuples are initialized as arguments in order in which they will be accessed.
+
+5. using namespace cv
+
+    namespace for OpenCV
+
+6.  typedef
+
+    Creates an alias that can be used anywhere in place of a (possibly complex) type name.
+
+    Syntax: typedef struct X {};
+    Example:    // simple typedef
+                typedef usigned long ulong;
+
+                // the following two objects have the same type
+                unsigned long l1;
+                ulong l2;
+
+                // more complicated typedef
+                typedef int int_t, *intp_t, ($fp)(int, ulong), arr_t[10];
+
+                // the following two objects have the same type
+                int a1[10];
+                arr_t a2;
+
+                // beware: the following two objects do not have the same type
+                const intp_t p1 = 0; // int *const p1 = 0
+                const int *p2;
+
+                // common C idiom to avoid having to write "struct S"
+                typedef struct {int a; int b} S, *pS;
+
+                // the following two objects have the same type
+                pS ps1;
+                S* ps2;
+
+    Uses of typedef in star_clustering.cpp:
+    typedef tuple <int /*x*/, int /*y*/> PixelPosT;     // defining a type of tuple with two int arguments called PixelPosT
+    typedef set<PixelPosT> PixelPosSetT;                // defining a type of set with PixelPosT as argument called PixelPosSetT
+    typedef list<PixelPosT> PixelPosListT;              // defining a type of list with PixelPosT as argument called PixelPosListT
+
+7. 8. erase()
+    Removes a single element or a range of elements from the list.
+
+9. find()
+    
+    Description
+    The C__ function std::algorithm::find() finds the first occurence of the element.
+    It uses operator = for comparison.
+
+    Declaration
+        template <class InputIterator, classT>
+        InputIterator find (InputIterator first, InputIterator last, const T& val);
+
+    Parameters
+    first - input iterator to the initial position
+    last - input iterator to the final position 
+    val - value to compare the elements
+    
+    Return Value
+    If element found it returns an iterator pointing to the first occurence of the element otherwise returns last.
+
+    Exceptions
+    Throws exception if either element comparison or an operation on an iterator throws exception.
+    Please note that invalid parameters cause undefined behavior.
+
+10. push_front(g)
+    Adds a new element 'g' at the beginning of the list.
+
+11. push_back(g)
+    Adds a new element 'g' at the end of the list.
+
+12. insert()
+    insert() function is an inbuilt function in C++ STL, which is defined in <set> header file.
+    This function is used to insert elements in the set container.
+    As the set containes the unique values, insert() not only inserts the element.
+    It first checks whether the element which is to be inserted is not present in the set container.
+    The element we will insert will be inserted according to its sorted position.
+
+    Syntax:
+        Set1.insert(const type_t &value); ----(1)
+        or
+        Set1.insert(iterator position, const type_t &value); ----(2)
+        or
+        Set1.insert(iterator position_1, iterator_position_2); ----(3)
+
+    Parameters
+        value - It is the value which is to be inserted in the set container.
+        position - It is the hint to the position, it will start searching from this position and inserts the element where it is suited to be inserted.
+        position_1, position_2  -   These are the iteratro which specifies the range which is to be inserted in the set associated with insert().
+                                    position_1 for starting of the range and position_2 for the end of the range.
+
+    Return Value
+    The function returns different tpyes of values according to the arguments passed in the function.
+        a. When we pass only the value:
+        the function returns the iterator pointing to the element which is being inserted in the set container.
+
+        b. When we pass position with the value:
+        The function again returns the iterator pointing to the element which is being inserted in the set container.
+
+        c. When we pass the position_1 and position_2:
+        the function returns the set of the values which comes between the range.
+
+    Examples:
+    Input: set<int> mysetl
+        myset.insert(10);
+    Output: values in the set = 10
+
+    Input: set <int> myset = {11, 12, 13, 14};
+        myset.insert(myset.begin(),10);
+    Output: values in the set = 10 11 12 13 14
+
+13. end
+    Returns an iterator which points to past-the-end element in the vector container.
+    The past-the-end element is the theoretical ement that would follow the last element in the vector.
+
+14. pop_front()
+    Removes the first element of the list, and reduces size of the list by 1.
+
+15. pop_back()
+    Removes the last element of the list, and reduces size of the list by 1.
+    
+16. imread
+    loads the image using the file path specified by the first argument.
+    The second argument is optional and specifies the format in which we want the image.
+
+17. empty
+    returns whether the string is empty (whether is length is 0).
+    This funciton does not modify the value of the string in any way.
+    To clear the content of a string, use string::clear.
+
+18. get
+    Extracts characters from the stream, as unformatted input.
+    It reads characters from stdin and stores them until a newline character is found or end of file occurs.
+
+    cin.get() is used for accessing character array.
+    It includes whit espace characters.
+
+19. try
+    One of the advantages of C++ over C is Exception Handling.
+    Exceptions are run-time anomalies or abnormal conditions that a program encounters during its execution.
+    There are two types of exceptions: Synchronous and Asynchronous.
+
+    try represents a block of code that can throw an exception.
+    The try statement allows you to define a block of code to be tested for errors while it is being executed.
+
+    Exception handling in C++ consists of three keywords: try, throw, and catch.
+    The try statement allows you to define a block of code to be tested for errors while it is being executed.
+    The throw keyword throws an exception when a problem is detected, which lets us create a custom error.
+    The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+    Example
+        try {
+            //Block of code to try
+            throw exception; // Throw an exception when a problem arise
+        
+        }
+        catch () {
+            // Block of code to handle errors
+        }
+
+20. cerr
+    The cerr object in C++ is used to print error messages.
+    It is defined in the iostream header file.
+
+    Example:
+        #include <iostream>
+        using namespace std;
+
+        int main() {
+            // print error message
+            cerr << "Error!!";
+            return 0;
+        }
+
+        // Output: Error!!
+
+LIST OF VARIABLES
+
+getAndRemoveNeighbours
+inCurPixelPos
+inoutWhitePixels
+inoutPixelsToBeProcessed
+outPixelCluster
+size_t
+_x
+_y
+_numPixels
+offsets
+curPixPos
+itPixPos
+cluster_stars
+outRecognizedClusters
+j
+image_threshold
+rows
+uchar
+whitePixels
+
+pixelCluster
+pixelsToBeProcessed
+itWhitePixPos
+curPixelPos
+argc
+argv
+image
+
+isSuccess
+recognizedPixelClusters;
+threshold
+
+LIST OF FUNCTIONS
+getAndRemoveNeighbours(PixelPosT inCurPixelPos, PixelPosSetT * inoutWhitePixels, 
+                       PixelPosListT * inoutPixelsToBeProcessed,
+                       PixelPosListT * outPixelCluster)
+
+cluster_stars(Mat & image_threshold, vector<PixelPosListT> * outRecognizedClusters)
+
+main
+
+OTHERS
+
+Otsu threshold
