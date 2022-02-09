@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/davidcxpardede/learn_opencv/src/star_clustering'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/home/davidcxpardede/learn_opencv/src/star_clustering'
+ 

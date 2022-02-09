@@ -120,7 +120,7 @@ STRUCTURES
     Parameters
         value - It is the value which is to be inserted in the set container.
         position - It is the hint to the position, it will start searching from this position and inserts the element where it is suited to be inserted.
-        position_1, position_2  -   These are the iteratro which specifies the range which is to be inserted in the set associated with insert().
+        position_1, position_2  -   These are the iterator which specifies the range which is to be inserted in the set associated with insert().
                                     position_1 for starting of the range and position_2 for the end of the range.
 
     Return Value
@@ -207,6 +207,10 @@ STRUCTURES
         }
 
         // Output: Error!!
+
+21. size_t
+    size_t is an unsigned integral data type which is defined in various header files
+    
 
 LIST OF VARIABLES
 
