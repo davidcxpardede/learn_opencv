@@ -17,7 +17,7 @@ int main() {
 
     int i;          // Horizontal Pixel Coordinate
     int j;          // Vertical Pixel Coordinate
-    int G[5][5];     // Gray Value
+    int G[5][5] = {};     // Gray Value
 
     float xc;       // Horizontal Center of Gravity
     float yc;       // Vertical Center of Gravity
@@ -40,11 +40,11 @@ int main() {
 
         for (i = 0; i < nI; i++) {
             for (j = 0; j < nJ; j++) {
-                iG = i * G[i,j];
-                jG = j * G[i,j];
+                iG = i * G(i,j);
+                jG = j * G(i,j);
                 sigmaIG += iG;
                 sigmaJG += jG;
-                sigmaG += G[i,j];
+                sigmaG += G(i,j);
             }
         }
     
