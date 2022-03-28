@@ -40,8 +40,8 @@ typedef list<PixelPosT> PixelPosListT;        // A list with a tuple argument ca
                         std::get<0>(inCurPixelPos) + offsets[p][_x],  // The first argument is the first element of inCurPixelPos plus the element of offsets [p] and [_x]
                         std::get<1>(inCurPixelPos) + offsets[p][_y]   // The second argument is the second element of inCurPixelPos plus the element of offsets [p] and [_y]
       );  // For each p (from 0 to 7), the values of the arguments of curPixPos are stored as desribed above
-      // Declare a PixelPosSetT called itPixPos
-      // itPixPos uses an iterator that finds the value of inOutWhitePixels (a PixelPosSetT) inside the curPixPos defined above
+      // Declare a PixelPosSetT iterator called itPixPos
+      // itPixPos is an iterator that finds the values of curPixPos and store it as inoutWhitePixels (pointer)
       PixelPosSetT::iterator itPixPos = inoutWhitePixels->find(curPixPos);
 
       // Create an if statement to check whether itPixPos has a value (whether the value of inOutWhitePixels is found inside the curPixPos)
@@ -118,7 +118,7 @@ int main(int argc, char** argv)
   // Read the image file and store it in image (matrix)
   // The image file is located in the data folder with the name specified below
   // The image file is of the type IMREAD_GRAYSCALE (an 8-bit grayscale image)
-  Mat image = imread("./data/eight_stars.jpg", IMREAD_GRAYSCALE);
+  Mat image = imread("./data/stars_ori.jpg", IMREAD_GRAYSCALE);
 
   // Check for failure
   if (image.empty())

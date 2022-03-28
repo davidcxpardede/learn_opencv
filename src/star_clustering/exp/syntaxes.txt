@@ -17,7 +17,7 @@ STRUCTURES
     In set, all the elements are stored in the sorted position.
 
 3. #include <algorithm>
-
+A
     The header <algoritm> defines a collection of functions especially designed to be used on ranges of elements.
 
     A range is any sequence of objects that can be accessed through iterators or pointers, such as an array or an instance of some of the STL containers.
