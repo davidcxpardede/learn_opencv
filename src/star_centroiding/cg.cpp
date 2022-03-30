@@ -32,7 +32,7 @@ int main() {
 
     for (i = 0; i < nI; i++) {
         for (j = 0; j < nJ; j++) {
-            G(i,j) = rand() % 255 + 1;
+           G[i][j] = rand() % 255 + 1;
         }
     }
 
@@ -40,11 +40,11 @@ int main() {
 
         for (i = 0; i < nI; i++) {
             for (j = 0; j < nJ; j++) {
-                iG = i * G(i,j);
-                jG = j * G(i,j);
+                iG = i * G[i][j];
+                jG = j * G[i][j];
                 sigmaIG += iG;
                 sigmaJG += jG;
-                sigmaG += G(i,j);
+                sigmaG += G[i][j];
             }
         }
     
@@ -54,4 +54,6 @@ int main() {
     yc = sigmaJG/sigmaG;
 
     return 0;
+
+    cout << ":v";
 }
