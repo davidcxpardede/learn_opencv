@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Mar 28 13:02:55 2022
+# Make data base, printed on Wed Mar 30 13:16:32 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ PATH = /home/davidcxpardede/.vscode-server/bin/c722ca6c7eed3d7987c0d5c3df5c45f6b
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-197e9b34-9c8a-430c-b202-d3d458977e81.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-72b4465d-5240-4b94-8337-438c1e24d40d.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -65,7 +65,7 @@ PWD = /home/davidcxpardede/learn_opencv/src
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/984_interop
+WSL_INTEROP = /run/WSL/8_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -138,8 +138,10 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
+# environment
+MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=63/1024=6%, Rehash=0, Collisions=4/85=5%
+# Load=64/1024=6%, Rehash=0, Collisions=4/86=5%
 
 # Pattern-specific Variable Values
 
@@ -147,9 +149,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2064, inode 103394): 6 files, no impossibilities.
+# . (device 2064, inode 103394): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -199,12 +201,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 132 B / avg = 9 B
-# current buf: size = 8162 B / used = 132 B / count = 14 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 149 B / avg = 9 B
+# current buf: size = 8162 B / used = 149 B / count = 15 / avg = 9 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Mon Mar 28 13:02:55 2022
+# Load=15/8192=0%, Rehash=0, Collisions=1/18=6%
+# Finished Make data base on Wed Mar 30 13:16:32 2022
 
  

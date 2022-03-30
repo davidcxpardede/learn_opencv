@@ -32,7 +32,7 @@ int main() {
 
     for (i = 0; i < nI; i++) {
         for (j = 0; j < nJ; j++) {
-            G[i,j] = rand() % 255 + 1;
+            G(i,j) = rand() % 255 + 1;
         }
     }
 
