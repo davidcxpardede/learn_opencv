@@ -1,5 +1,5 @@
 // STAR CENTROIDING METHOD
-// CENTER OF GRAVITY
+// WEIGHTED CENTER OF GRAVITY
 
 #include <iostream>
 using namespace std;
@@ -52,4 +52,6 @@ int main() {
     yc = sigmaJG/sigmaG;
 
     return 0;
+
+    cout << ":v";
 }
