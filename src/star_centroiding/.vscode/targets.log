@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Apr  4 14:40:10 2022
+# Make data base, printed on Tue Apr  5 12:01:30 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ PATH = /home/davidcxpardede/.vscode-server/bin/e18005f0f1b33c29e81d732535d8c0e47
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0278bbb4-8458-4893-8e13-8be4e3987ba5.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-0a5a4b21-6dbd-4968-8cc1-acf7e9a06856.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # automatic
@@ -65,7 +65,7 @@ PWD = /home/davidcxpardede/learn_opencv/src/star_centroiding
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/2553_interop
+WSL_INTEROP = /run/WSL/8_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -138,8 +138,10 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
+# environment
+MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=63/1024=6%, Rehash=0, Collisions=4/85=5%
+# Load=64/1024=6%, Rehash=0, Collisions=4/86=5%
 
 # Pattern-specific Variable Values
 
@@ -147,9 +149,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2064, inode 41832): 6 files, no impossibilities.
+# . (device 2064, inode 41832): 9 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -199,12 +201,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 14 / storage = 116 B / avg = 8 B
-# current buf: size = 8162 B / used = 116 B / count = 14 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 134 B / avg = 7 B
+# current buf: size = 8162 B / used = 134 B / count = 17 / avg = 7 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 20 / hit rate = 15%
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Mon Apr  4 14:40:10 2022
+# Load=17/8192=0%, Rehash=0, Collisions=1/20=5%
+# Finished Make data base on Tue Apr  5 12:01:30 2022
 
  

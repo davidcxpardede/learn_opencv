@@ -1,7 +1,7 @@
 // STAR CENTROIDING METHOD
 // CENTER OF GRAVITY
-// This program calculates the center of gravity of a star based on randomly generated gray values
-// across a certain number of pixels.
+// This program calculates the center of gravity of several stars that are randomly generated
+// with a certain radius in a certain number of pixels that acts as the image taken.
 
 #include <iostream>
 #include <ctime>
