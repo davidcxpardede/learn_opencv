@@ -51,16 +51,21 @@ int main() {
         cg[i1][1] = {r + rand() % (fJ - r + 1)};
 
         i3 = i1;
+        cout << "i3 = " << i3 << endl;
 
         for (i2 = 1; i2 <= i3; i2++) {
             ci = abs(cg[i1][0] - cgd[i1-i2][0]);
             cj = abs(cg[i1][1] - cgd[i1-i2][1]);
             cout << i1 << ". ci = " << ci << ", cj = " << cj << endl;
 
-            if ((ci < 10 * r) && (cj < 10 * r)) {
+            if (ci < (10 * r) || (cj < 10 * r)) {
+                
                 i1 = i1 - 1;
-                i2 = i3 + 1;
+                i2 = i3;
+                
+            cout << "i2 = " << i2 << endl;
             }
+
         }
 
         cgd[i1][0] = cg[i1][0];
