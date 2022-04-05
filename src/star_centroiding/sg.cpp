@@ -59,7 +59,7 @@ int main() {
             cout << i1 << ". ci = " << ci << ", cj = " << cj << endl;
 
             if (ci < (10 * r) || (cj < 10 * r)) {
-                
+                ./
                 i1 = i1 - 1;
                 i2 = i3;
                 
