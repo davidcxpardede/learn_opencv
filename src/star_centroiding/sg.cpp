@@ -4,7 +4,7 @@
 
 // Logic
 // 1. Assign random CG location across the field of view
-//    The distance between CG is at least ten times maximum star radius
+//    The distance between CG is at least three times maximum star radius
 // 2. Assign random gray value around the declared CGs with certain radius
 //    The values are assigned from 1 - 255. The further away from the CG, the smaller the value.
 
@@ -17,7 +17,8 @@ int main() {
     int fI = 500; // Number of Pixels of the Field of View in the x-axis
     int fJ = 500; // Number of Pixels of the Field of View in the y-axis
     int r = 5;  // Star Common Radius
-    int n = (fI) / (10 * r);      // Effective star numbers
+    int d = 10 * r;
+    int n = fI/d;      // Effective star numbers
 
     int G;  // Gray values
     int i; // Pixel Location in the x-axis
@@ -34,7 +35,7 @@ int main() {
 
     // Assigning Initial CGs
     int i1 = 0;
-    int i2 = 0;
+    int i2 = 1;
     int i3 = 0;
     int ci, cj;
     
@@ -44,37 +45,45 @@ int main() {
     cgd[0][0] = cg[0][0];
     cgd[0][1] = cg[0][1];
 
-    i1 = 1;
+    
 
     for (i1 = 1; i1 < n; i1++) {
         cg[i1][0] = {r + rand() % (fI - r + 1)};
         cg[i1][1] = {r + rand() % (fJ - r + 1)};
 
         i3 = i1;
-        cout << "i3 = " << i3 << endl;
+        i2 = 1;
 
-        for (i2 = 1; i2 <= i3; i2++) {
+        while (i2 <= i3) {
             ci = abs(cg[i1][0] - cgd[i1-i2][0]);
             cj = abs(cg[i1][1] - cgd[i1-i2][1]);
-            cout << i1 << ". ci = " << ci << ", cj = " << cj << endl;
 
-            if (ci < (10 * r) || (cj < 10 * r)) {
-                ./
+            if ((ci < d) && (cj < d)) {
                 i1 = i1 - 1;
-                i2 = i3;
-                
-            cout << "i2 = " << i2 << endl;
+                i2 = i3 + 1;
             }
 
+            else {
+                i2++;
+                
+                cgd[i1][0] = cg[i1][0];
+                cgd[i1][1] = cg[i1][1];
+            }
         }
-
-        cgd[i1][0] = cg[i1][0];
-        cgd[i1][1] = cg[i1][1];
     }
 
     for(i1 = 0; i1 < n; i1++) {
         cout << i1 + 1 << ". CG: " << cg[i1][0] << ", " << cg[i1][1] << endl;
+        image[(cg[i1][0])][(cg[i1][1])] = 1;
     }
     
+    cout << "\n\nImage: " << endl;
+    for (i1 = 0; i1 < fI; i1++) {
+        for (i2 = 0; i2 < fJ; i2++) {
+            
+        // cout << image[i1][i2] << " ";
+        // Showing the image in terms of matrix
+        }
+    }
     return 0;
 }
