@@ -17,7 +17,7 @@ int main() {
     int fI = 500; // Number of Pixels of the Field of View in the x-axis
     int fJ = 500; // Number of Pixels of the Field of View in the y-axis
     int r = 5;  // Star Common Radius
-    int d = 10 * r;
+    int d = 15 * r;
     int n = fI/d;      // Effective star numbers
 
     int G;  // Gray values
@@ -72,12 +72,19 @@ int main() {
         }
     }
 
+    cout << "\nPixel number: " << fI << " x " << fJ << endl;
+    cout << "Star radius: " << r << endl;
+    cout << "Effective star number: " << n << endl;
+    cout << "Star minimum distance: " << d << endl << endl;
+
     for(i1 = 0; i1 < n; i1++) {
-        cout << i1 + 1 << ". CG: " << cg[i1][0] << ", " << cg[i1][1] << endl;
+        cout << "CG" << i1 + 1 << ": " << cg[i1][0] << ", " << cg[i1][1] << endl;
         image[(cg[i1][0])][(cg[i1][1])] = 1;
     }
     
-    cout << "\n\nImage: " << endl;
+    cout << endl;
+
+    // cout << "\nImage: " << endl;
     for (i1 = 0; i1 < fI; i1++) {
         for (i2 = 0; i2 < fJ; i2++) {
             

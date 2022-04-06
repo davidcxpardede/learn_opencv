@@ -16,7 +16,7 @@ int main() {
 
     int i;                  // Horizontal Pixel Coordinate
     int j;                  // Vertical Pixel Coordinate
-    int G[nI][nJ] = {};       // Gray Value (Randomly Generated)
+    int G[nI][nJ] = {};     // Gray Value (Randomly Generated)
 
     float sigmaIG = 0;            // Sum of i and G product
     float iG = 0;                 // Product of i and G
@@ -28,7 +28,8 @@ int main() {
     float yc;               // Vertical Center of Gravity
 
     // Defining Gray Value (Randomly Generated)
-
+    
+    cout << "\nThe gray value of the stars are: " << endl;
     srand ( time (NULL) );
     for (j = 0; j < nJ; j++) {
         for (i = 0; i < nI; i++) {
@@ -49,17 +50,13 @@ int main() {
                 sigmaG += G[i][j];
             }
         }
-    
-    cout << "sigmaIG = " << sigmaIG << endl;
-    cout << "sigmaJG = " << sigmaJG << endl;
-    cout << "sigmaG = " << sigmaG << endl;
 
     // Defining Equations
 
     xc = sigmaIG/sigmaG;
     yc = sigmaJG/sigmaG;
 
-    cout << "The center of gravity is (" << xc << ", " << yc << ")." << endl;
+    cout << "\nThe center of gravity is (" << xc << ", " << yc << ")." << endl;
 
     return 0;
 }
