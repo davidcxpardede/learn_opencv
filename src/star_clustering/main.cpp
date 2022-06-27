@@ -27,7 +27,7 @@ void getAndRemoveNeighbours(PixelPosT inCurPixelPos, PixelPosSetT * inoutWhitePi
                                        { -1, 1 }, { 0, 1 }, { 1, 1 } };
   
   for (size_t p = 0; p < _numPixels; ++p) {
-    PixelPosT curPixPos(`
+    PixelPosT curPixPos(
                         std::get<0>(inCurPixelPos) + offsets[p][_x],
                         std::get<1>(inCurPixelPos) + offsets[p][_y]
     );
@@ -83,7 +83,7 @@ void cluster_stars(Mat & image_threshold, vector<PixelPosListT> * outRecognizedC
 int main(int argc, char** argv)
 {
   // Read the image file
-  Mat image = imread("./data/star_images/stars_9.jpg", IMREAD_GRAYSCALE);
+  Mat image = imread("./data/stars_ori.jpg", IMREAD_GRAYSCALE);
 
   // Check for failure
   if (image.empty())
